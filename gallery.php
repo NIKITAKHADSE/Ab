@@ -1,3 +1,14 @@
-<?php $title='Gallery | ABSSOLUTE HOMTEL'; include 'includes/header.php'; ?>
-<section class="page-hero"><p class="eyebrow">Gallery</p><h1>See the spaces</h1><p>Original property photographs can be added here without changing the gallery code.</p></section><section><div class="filters" role="group" aria-label="Gallery filters"><button data-filter="all">All</button><button data-filter="room">Rooms</button><button data-filter="apartment">Apartments</button><button data-filter="property">Property</button><button data-filter="lifestyle">Lifestyle</button></div><div class="gallery-grid"><?php foreach(['room','apartment','property','lifestyle','room','property'] as $i=>$cat): ?><button class="gallery-item placeholder" data-category="<?=$cat?>" aria-label="Open <?=$cat?> image placeholder"><?=ucfirst($cat)?> photo <?=$i+1?></button><?php endforeach; ?></div></section><dialog id="lightbox"><button class="close" aria-label="Close">×</button><p>Original property image placeholder</p></dialog><?php include 'includes/footer.php'; ?>
-
+<?php $title = 'Gallery | ABSSOLUTE HOMTEL';
+include 'includes/header.php'; ?>
+<section class="page-hero">
+    <p class="eyebrow">Gallery</p>
+    <h1>See the spaces</h1>
+    <p>Original property photographs can be added here without changing the gallery code.</p>
+</section>
+<section>
+    <div class="filters" role="group" aria-label="Gallery filters"><button data-filter="all">All</button><button data-filter="room">Rooms</button><button data-filter="apartment">Apartments</button><button data-filter="property">Property</button><button data-filter="lifestyle">Lifestyle</button></div>
+    <div class="gallery-grid"><?php foreach (['room', 'apartment', 'property', 'lifestyle', 'room', 'property'] as $i => $cat): ?><button class="gallery-item placeholder" data-category="<?= $cat ?>" aria-label="Open <?= $cat ?> image placeholder"><?= ucfirst($cat) ?> photo <?= $i + 1 ?></button><?php endforeach; ?></div>
+</section>
+<dialog id="lightbox"><button class="close" aria-label="Close">×</button>
+    <p>Original property image placeholder</p>
+</dialog><?php include 'includes/footer.php'; ?>
